@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Service Form - ProjectOrion</title>
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <style>
+        /* Add spacing to the top of the page to prevent content from being hidden behind the fixed navbar */
+        body {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ProjectOrion</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Activity</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Plans</a>
+                            <a class="dropdown-item" href="#">Payments</a>
+                            <a class="dropdown-item" href="#">Promo Codes</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Manage</h6>
+                            <a class="dropdown-item" href="#">Add Servers</a>
+                            <a class="dropdown-item" href="#">View Servers</a>
+                            <a class="dropdown-item" href="#">Libraries</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Analytics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tickets</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSettings" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownSettings">
+                            <a class="dropdown-item" href="#">General</a>
+                            <a class="dropdown-item" href="#">Payment Gateways</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Discord</h6>
+                            <a class="dropdown-item" href="#">Announcements</a>
+                            <a class="dropdown-item" href="#">Notifications</a>
+                            <a class="dropdown-item" href="#">Roles</a>
+                            <a class="dropdown-item" href="#">Rules</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Welcome, Orion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="mb-4 text-center">Add Server</h2>
+                <form>
+                    <!-- IP Address -->
+                    <div class="form-group">
+                        <label for="ipAddress">IP Address</label>
+                        <input type="text" class="form-control" id="ipAddress" placeholder="Enter IP address" required>
+                    </div>
+
+                    <!-- Port -->
+                    <div class="form-group">
+                        <label for="port">Port</label>
+                        <input type="number" class="form-control" id="port" placeholder="Enter port number" required>
+                    </div>
+
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="serviceName">Name</label>
+                        <input type="text" class="form-control" id="serviceName" placeholder="Enter service name"
+                            required>
+                    </div>
+
+                    <!-- Service (Dropdown) -->
+                    <div class="form-group">
+                        <label for="serviceType">Service</label>
+                        <select class="form-control" id="serviceType" required>
+                            <option value="">Select a service</option>
+                            <option value="web">Web</option>
+                            <option value="database">Database</option>
+                            <option value="ftp">FTP</option>
+                            <option value="email">Email</option>
+                            <option value="plex">Plex</option>
+                        </select>
+                    </div>
+
+                    <!-- Capacity -->
+                    <div class="form-group">
+                        <label for="capacity">Capacity</label>
+                        <input type="number" class="form-control" id="capacity" placeholder="Enter capacity" required>
+                    </div>
+
+                    <!-- Token -->
+                    <div class="form-group">
+                        <label for="token">Token</label>
+                        <input type="text" class="form-control" id="token" placeholder="Enter token" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-block">Add Service</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 4 JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to Handle Service and Capacity Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var serviceType = document.getElementById('serviceType');
+            var capacity = document.getElementById('capacity');
+
+            serviceType.addEventListener('change', function () {
+                if (serviceType.value === 'plex') {
+                    capacity.value = 100;
+                    capacity.readOnly = true; // Make the input read-only
+                } else {
+                    capacity.value = ''; // Clear the value when it's not Plex
+                    capacity.readOnly = false; // Make the input editable
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
