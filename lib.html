@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouped Transactions</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .group-title {
+            background-color: #e2e2e2;
+            font-weight: bold;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grouped Transactions</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>From</th>
+                <th>DateTime (UTC)</th>
+                <th>Message</th>
+                <th>Item</th>
+                <th>Received</th>
+                <th>Given</th>
+                <th>Currency</th>
+                <th>TransactionType</th>
+                <th>TransactionId</th>
+                <th>Reference</th>
+                <th>SalesTax</th>
+                <th>SalesTaxPercentage</th>
+                <th>SalesTaxIncludesShipping</th>
+                <th>BuyerCountry</th>
+                <th>BuyerStateOrProvince</th>
+                <th>BuyerEmail</th>
+                <th>PaymentProvider</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Pig-E-Wig Group -->
+            <tr class="group-title"><td colspan="16">Pig-E-Wig</td></tr>
+            <tr>
+                <td>Pig-E-Wig</td>
+                <td>06/26/2024 19:07</td>
+                <td></td>
+                <td>Budget</td>
+                <td>3.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Monthly Donation</td>
+                <td>db608b20-c4f8-49e3-b6b9-6c4b96cade42</td>
+                <td>M-T6T0ZSNF7</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>rtaylortaylor87@gmail.com</td>
+                <td>PayPal</td>
+            </tr>
+            <tr>
+                <td>Pig-E-Wig</td>
+                <td>07/26/2024 00:42</td>
+                <td></td>
+                <td>Budget</td>
+                <td>3.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Monthly Donation</td>
+                <td>950f52c6-e3f0-4d94-811c-387147221637</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>PayPal</td>
+            </tr>
+            <tr>
+                <td>Pig-E-Wig</td>
+                <td>08/26/2024 00:55</td>
+                <td></td>
+                <td>Budget</td>
+                <td>3.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Monthly Donation</td>
+                <td>a18882b9-32ee-416d-9bd3-84e89c7af812</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>PayPal</td>
+            </tr>
+
+            <!-- KageMugen Group -->
+            <tr class="group-title"><td colspan="16">KageMugen</td></tr>
+            <tr>
+                <td>KageMugen</td>
+                <td>06/27/2024 15:06</td>
+                <td></td>
+                <td>Ko-fi Support</td>
+                <td>5.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Donation</td>
+                <td>a5d2b8a8-8a5c-4e75-b57f-19fd904bcd98</td>
+                <td>T-F2F1ZTPWY</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>mario.skraban78@gmail.com</td>
+                <td>PayPal</td>
+            </tr>
+
+            <!-- Metzons Group -->
+            <tr class="group-title"><td colspan="16">Metzons</td></tr>
+            <tr>
+                <td>Metzons</td>
+                <td>06/29/2024 08:38</td>
+                <td></td>
+                <td>Budget</td>
+                <td>3.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Monthly Donation</td>
+                <td>d1584fe0-0f0b-4741-8717-f664ea4fec97</td>
+                <td>M-L3L8ZVDVK</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>kevinmetzen@icloud.com</td>
+                <td>PayPal</td>
+            </tr>
+            <tr>
+                <td>Metzons</td>
+                <td>07/28/2024 12:00</td>
+                <td></td>
+                <td>Budget</td>
+                <td>3.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Monthly Donation</td>
+                <td>50204fcb-2d71-494b-8971-9c663a503a85</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>PayPal</td>
+            </tr>
+            <tr>
+                <td>Metzons</td>
+                <td>08/28/2024 12:01</td>
+                <td></td>
+                <td>Budget</td>
+                <td>3.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Monthly Donation</td>
+                <td>1a1048ee-5702-4ce0-adaa-4b44d8afaa32</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>PayPal</td>
+            </tr>
+
+            <!-- Neptiis Group -->
+            <tr class="group-title"><td colspan="16">Neptiis</td></tr>
+            <tr>
+                <td>Neptiis</td>
+                <td>07/30/2024 18:41</td>
+                <td></td>
+                <td>Donor</td>
+                <td>5.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Monthly Donation</td>
+                <td>d3e67cc4-b418-4a11-b32c-8f86e087f556</td>
+                <td>M-Z8Z6116LZ2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>neptiishrestha@gmail.com</td>
+                <td>PayPal</td>
+            </tr>
+            <tr>
+                <td>Neptiis</td>
+                <td>08/30/2024 00:06</td>
+                <td></td>
+                <td>Donor</td>
+                <td>5.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Monthly Donation</td>
+                <td>28b70a57-8de5-4250-9a66-251aca905b96</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>PayPal</td>
+            </tr>
+
+            <!-- Paulaxlobbi Group -->
+            <tr class="group-title"><td colspan="16">Paulaxlobbi</td></tr>
+            <tr>
+                <td>Paulaxlobbi</td>
+                <td>08/08/2024 18:07</td>
+                <td></td>
+                <td>Ko-fi Support</td>
+                <td>5.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Donation</td>
+                <td>9c57e13d-06cf-40f2-b154-f0206ab06ba0</td>
+                <td>T-T6T711KYZ4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>jagerpaula@hotmail.com</td>
+                <td>PayPal</td>
+            </tr>
+            <tr>
+                <td>Paulaxlobbi</td>
+                <td>08/24/2024 08:36</td>
+                <td></td>
+                <td>Ko-fi Support</td>
+                <td>5.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Donation</td>
+                <td>c0a91bd7-412d-4d39-bbbd-0646ce6be538</td>
+                <td>T-R6R712AMAK</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>jagerpaula@hotmail.com</td>
+                <td>PayPal</td>
+            </tr>
+
+            <!-- Pirdex Group -->
+            <tr class="group-title"><td colspan="16">Pirdex</td></tr>
+            <tr>
+                <td>Pirdex</td>
+                <td>08/13/2024 00:28</td>
+                <td></td>
+                <td>Donor</td>
+                <td>5.00</td>
+                <td>0</td>
+                <td>USD</td>
+                <td>Donation</td>
+                <td>f3c62e69-e2ff-4901-bd60-98f1ddefc64b</td>
+                <td>T-P8T702G5S9</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>pirdex@outlook.com</td>
+                <td>PayPal</td>
+            </tr>
+
+            <!-- Individual Entries -->
+            <tr class="group-title"><td colspan="16">Individual Entries</td></tr>
+            <!-- If there are any entries not grouped under the same sender, list them here. -->
+        </tbody>
+    </table>
+</body>
+</html>
